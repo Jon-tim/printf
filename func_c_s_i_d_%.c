@@ -46,10 +46,10 @@ int print_percent(va_list args)
  */
 int print_c(va_list args)
 {
-        int c;
+	int c;
 
-        c = va_arg(args, int);
-        return (_putchar(c));
+	c = va_arg(args, int);
+	return (_putchar(c));
 }
 
 /**
@@ -97,5 +97,3 @@ int print_i(va_list args)
 {
 	return (print_d(args));
 }
-Footer
-
