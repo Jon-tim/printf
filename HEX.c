@@ -34,4 +34,4 @@ int HEX(va_list args)
 	}
 	free(arr);
 	return (count);
-}
+};
