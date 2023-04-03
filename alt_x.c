@@ -31,4 +31,4 @@ int alt_x(unsigned long int num)
 	}
 	free(arr);
 	return (count);
-}.
+}
