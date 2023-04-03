@@ -1,19 +1,27 @@
 #include "main.h"
-
 /**
- * find_function - look for the specifier
+ * get_functions - look for the specifier
  * @x: variable to the function
  * Return: function
  */
-int (*find_function(char x))(va_list)
+int (*get_functions(char x))(va_list)
 {
 	int i = 0;
+
 	spec arr[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"%", print_percent},
 		{"d", print_d},
 		{"i", print_i},
+		{"b", decimalToBinary},
+		{"o", octal},
+		{"p", pointer},
+		{"x", hex},
+		{"X", HEX},
+		{"u", unsign},
+		{"r", reverse},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 	while (arr[i].valid)
@@ -24,5 +32,3 @@ int (*find_function(char x))(va_list)
 	}
 	return (NULL);
 }
-Footer
-

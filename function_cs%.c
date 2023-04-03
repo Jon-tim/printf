@@ -1,5 +1,18 @@
 #include "main.h"
 /**
+ * print_c - prints character
+ * @args: character argument
+ * Return: number of characters
+ */
+int print_c(va_list args)
+{
+	int c;
+
+	c = va_arg(args, int);
+	return (_putchar(c));
+}
+
+/**
  * print_s - prints a string
  * @args: string  argument
  * Return: number of characters
@@ -10,9 +23,10 @@ int print_s(va_list args)
 	char *str;
 
 	i = 0;
-	str = va_arg(args, char*);
+	str = va_arg(args, char *);
 	if (str == NULL)
 		str = "(null)";
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
@@ -21,6 +35,7 @@ int print_s(va_list args)
 	}
 	return (count);
 }
+
 /**
  * print_percent - pass the percent sing
  * @args: string  argument
@@ -40,59 +55,43 @@ int print_percent(va_list args)
 }
 
 /**
- * print_c - prints character
- * @args: character argument
- * Return: number of characters
- */
-int print_c(va_list args)
-{
-	int c;
-
-	c = va_arg(args, int);
-	return (_putchar(c));
-}
-
-/**
  * print_d - prints a decimal
  * @args: decimal argument
  * Return: counter
  */
 int print_d(va_list args)
 {
-
-	unsigned int abs, x, count, o;
+	unsigned int absolute, aux, countnum, count;
 	int n;
 
-	o = 0;
+	count = 0;
 	n = va_arg(args, int);
-		if (n < 0)
-		{
-			abs = (n * -1);
-			o += _putchar('-');
-		}
-		else
-			abs = n;
-
-	x = abs;
-	count = 1;
-	while (x > 9)
+	if (n < 0)
 	{
-		x /= 10;
-		count *= 10;
-	}
-	while (count >= 1)
+		absolute = (n * -1);
+		count += _putchar('-');
+	} else
+		absolute = n;
+	aux = absolute;
+	countnum = 1;
+	while (aux > 9)
 	{
-		o += _putchar(((abs / count) % 10) + '0');
-		count /= 10;
+		aux /= 10;
+		countnum *= 10;
 	}
-	return (o);
+	while (countnum >= 1)
+	{
+		count += _putchar(((absolute / countnum) % 10) + '0');
+		countnum /= 10;
+	}
+	return (count);
 }
+
 /**
  * print_i - prints integer
  * @args: integer argument
  * Return: the decimal function
  */
-
 int print_i(va_list args)
 {
 	return (print_d(args));
