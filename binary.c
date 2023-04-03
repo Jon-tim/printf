@@ -32,4 +32,4 @@ int decimalToBinary(va_list args)
 		_putchar('0');
 	}
 	return (count);
-}
+};
