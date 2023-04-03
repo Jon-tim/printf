@@ -10,8 +10,7 @@ int rot13(va_list args)
 	int k = 0;
 	char *s = va_arg(args, char *);
 	char alphabets[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-	char rev_alphabets[] = {
-      "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
+	char rev_alphas[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
 	if (s == NULL)
 		s = "(null)";
@@ -22,7 +21,7 @@ int rot13(va_list args)
 		{
 			if (s[i] == alphabets[j])
 			{
-				_putchar(rev_alphabets[j]);
+				_putchar(rev_alphas[j]);
 				count++;
 				k = 1;
 			}

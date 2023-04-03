@@ -4,10 +4,17 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-typedef struct specifier {
-  char *valid;
-  int (*f)(va_list);
+/**
+ * struct specifier - struct to match functions and specifiers
+ * @valid: pointer for specifiers
+ * @f - function to convert specifier
+ */
+typedef struct specifier
+{
+	char *valid;
+	int (*f)(va_list);
 } spec;
 
 int rot13(va_list args);
