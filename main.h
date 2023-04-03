@@ -24,7 +24,7 @@ int print_i(va_list args);
 int _putchar(char c);
 int print_percent(va_list args);
 int decimalToBinary(va_list args);
-int (*get_func(char x))(va_list args);
+int (*get_functions(char x))(va_list args);
 int alt_x(unsigned long int n);
 int _printf(const char *format, ...);
 int _putchar(char c);
