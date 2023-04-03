@@ -31,4 +31,4 @@ int (*get_functions(char x))(va_list)
 		i++;
 	}
 	return (NULL);
-}.
+}
