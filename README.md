@@ -27,8 +27,14 @@ Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: 
 Handle the following conversion specifier: p.
 
 
-Handle the following flag characters for non-custom conversion specifiers:
-
+Handle the following flag characters for non-custom conversion specifiers: 
 +
 space
 #
+
+
+Handle the following length modifiers for non-custom conversion specifiers:
+
+l
+h
+Conversion specifiers to handle: d, i, u, o, x, X
