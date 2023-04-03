@@ -32,4 +32,4 @@ int hex(va_list args)
 	}
 	free(arr);
 	return (count);
-}l
+}
