@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Pointer - prints a pointer
+ * pointer - prints a pointer
  * @args: argument
  * Return: b
  */
