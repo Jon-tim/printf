@@ -95,4 +95,4 @@ int print_d(va_list args)
 int print_i(va_list args)
 {
 	return (print_d(args));
-};
+}
